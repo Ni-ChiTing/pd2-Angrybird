@@ -1,8 +1,9 @@
 Rank		Name		Score
 1		dfdf		18000
 2		ggg		15000
-3		rtrg		10000
-4		eer		4000
-5		dfdf		0
-5		dfdf		0
-5		fff		0
+2		pig		15000
+4		rtrg		10000
+5		eer		4000
+6		dfdf		0
+6		dfdf		0
+6		fff		0

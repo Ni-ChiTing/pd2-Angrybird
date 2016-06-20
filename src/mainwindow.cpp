@@ -174,11 +174,7 @@ void MainWindow::todelete()
     }
     for(int i=0;i<itemListe.length();i++)
     {
-       if(itemListe.length()==0)
-       {
-               timer.stop();
-       emit gameover();
-       }
+
         if((itemListe.at(i)&&itemListe.at(i)->ifdelete)||itemListe.at(i)->getX()>33||itemListe.at(i)->getY()<-5)
        {
           score=score+ itemListe.at(i)->gettype()*1000;
@@ -275,7 +271,20 @@ birdie = new Bird(3.3f,5.5f,0.5f,&timer,QPixmap(":/bird.png").scaled(40,40),worl
 void MainWindow::tick()
 {
 
+    if(itemListe.length()==0)
+    {
 
+            if(birdnumber>=0)
+            {
+                score=birdnumber*10000;
+                birdnumber=0;
+                delete birdie;
+                birdie=NULL;
+            }
+
+                timer.stop();
+    emit gameover();
+    }
     if (birdie)
     {
 
